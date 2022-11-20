@@ -2,9 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  let columns = Math.floor(document.body.clientWidth / 50),
-    rows = Math.floor(document.body.clientHeight / 50);
-
   const createTile = (index) => {
     const tile = document.createElement("div");
 
@@ -12,7 +9,22 @@ function App() {
 
     return tile;
   };
-  return <div className="App"></div>;
+
+  const createTiles = (quantity) => {
+    Array.from(Array(quantity)).map((tile, index) => {
+      wrapper.appendChild(createTile(index));
+    });
+  };
+
+  const createGrid = () => {
+    wrapper.innerHTML = "";
+
+    let columns = Math.floor(document.body.clientWidth / 50),
+      rows = Math.floor(document.body.clientHeight / 50);
+
+    createTiles(columns * rows);
+  };
+  return <div className="tiles"></div>;
 }
 
 export default App;
