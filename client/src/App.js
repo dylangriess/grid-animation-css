@@ -24,6 +24,8 @@ function App() {
 
     createTiles(columns * rows);
   };
+
+  window.onresize = () => createGrid();
   return <div className="tiles"></div>;
 }
 
