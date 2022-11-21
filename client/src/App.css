@@ -32,7 +32,9 @@ body {
 
 .tile:before {
   background-color: rgb(20,20,20);
-  content: ""
+  content: "";
+  position: absolute;
+  inset: 0.5px;
 }
 
 @keyframes background-pan {
