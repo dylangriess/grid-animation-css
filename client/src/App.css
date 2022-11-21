@@ -1,16 +1,11 @@
 :root {
-  --g1: rgb(98,0, 234)
-  --g2: rgb(236,64,122)
+  --g1: rgb(98, 0, 234);
+  --g2: rgb(236, 64, 122);
 }
 
 body {
   animation: background-pan 10s linear infinite;
-  background-color: linear-gradient(
-    to right,
-    var(--g1),
-    var(--g2),
-    var(--g1)
-  );
+  background-color: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
   background-size: 200%;
   height: 100vh;
   overflow: hidden;
@@ -30,7 +25,7 @@ body {
 }
 
 .tile:before {
-  background-color: rgb(20,20,20);
+  background-color: rgb(20, 20, 20);
   content: "";
   position: absolute;
   inset: 0.5px;
