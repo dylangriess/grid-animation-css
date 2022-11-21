@@ -1,5 +1,17 @@
+:root {
+  --g1: rgb(98,0, 234)
+  --g2: rgb(236,64,122)
+}
+
 body {
-  background-color: rgb(20, 20, 20);
+  animation: background-pan 10s linear infinite;
+  background-color: linear-gradient(
+    to right,
+    var(--g1),
+    var(--g2),
+    var(--g1)
+  );
+  background-size: 200%;
   height: 100vh;
   overflow: hidden;
   margin: 0px;
@@ -16,4 +28,18 @@ body {
 
 .tile {
   outline: 1px solid white;
+}
+
+.tile:before {
+  background-color: rgb(20,20,20);
+  content: ""
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
 }
