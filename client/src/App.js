@@ -1,8 +1,13 @@
 import "./App.css";
 import anime from "animejs/lib/anime.es.js";
+import { useEffect } from "react";
 
 function App() {
   const wrapper = document.getElementById("tiles");
+  useEffect(() => {
+    wrapper = document.getElementById("tiles");
+    createGrid();
+  }, []);
 
   let columns = 0;
   let rows = 0;
@@ -19,14 +24,14 @@ function App() {
     "rgb(156,39,176)",
   ];
   const handleOnClick = (index) => {
-    count = count + 1;
+    // count = count + 1;
     toggled = !toggled;
     document.body.classList.toggle("toggled");
 
     anime({
       targets: ".tile",
       opacity: toggled ? 0 : 1,
-      backgroundColor: colors[count % (colors.length - 1)],
+      // backgroundColor: colors[count % (colors.length - 1)],
       delay: anime.stagger(50, {
         grid: [columns, rows],
         from: index,
