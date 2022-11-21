@@ -8,21 +8,20 @@ function App() {
   let rows = 0;
 
   let toggled = false;
+  let count = -1;
 
+  const colors = [
+    "rgb(229,57,53)",
+    "rgb(253,216,53)",
+    "rgb(244,81,30)",
+    "rgb(76,175,80)",
+    "rgb(33,150,243)",
+    "rgb(156,39,176)",
+  ];
   const handleOnClick = (index) => {
+    count = count + 1;
     toggled = !toggled;
     document.body.classList.toggle("toggled");
-
-    const colors = [
-      "rgb(229,57,53)",
-      "rgb(253,216,53)",
-      "rgb(244,81,30)",
-      "rgb(76,175,80)",
-      "rgb(33,150,243)",
-      "rgb(156,39,176)",
-    ];
-    let count = -1;
-    count = count + 1;
 
     anime({
       targets: ".tile",
