@@ -25,12 +25,14 @@ function App() {
   ];
 
   const handleOnClick = (index) => {
+    // comment out below for dynamic grid
     count = count + 1;
     toggle = !toggle;
 
     anime({
       targets: ".tile",
       opacity: toggle ? 0 : 1,
+      // comment out below for dynamic grid
       backgroundColor: colors[count % (colors.length - 1)],
       delay: anime.stagger(50, {
         grid: [columns, rows],
