@@ -31,7 +31,7 @@ function App() {
     anime({
       targets: ".tile",
       opacity: toggle ? 0 : 1,
-      // backgroundColor: colors[count % (colors.length - 1)],
+      // backgroundColor: colors[count % (colors.length -1)],
       delay: anime.stagger(50, {
         grid: [columns, rows],
         from: index,
@@ -53,19 +53,19 @@ function App() {
 
   const createGrid = () => {
     wrapper.innerHTML = "";
-    let columns = Math.floor(document.body.clientWidth / 50);
-    let rows = Math.floor(document.body.clientHeight / 50);
-
+    columns = Math.floor(document.body.clientWidth / 50);
+    rows = Math.floor(document.body.clientHeight / 50);
     wrapper.style.setProperty("--columns", columns);
     wrapper.style.setProperty("--rows", rows);
     createTiles(columns * rows);
   };
 
   window.onresize = () => createGrid();
-
   return (
     <div className="App" id="tiles">
-      <div>Dylan Griess</div>
+      <div className="canvas bg-slate-500">
+        <h1>Dylan Griess</h1>
+      </div>
     </div>
   );
 }
