@@ -1,6 +1,6 @@
 :root {
-  --g1: rgb(34, 237, 255);
-  --g2: rgb(66, 22, 119);
+  --g1: rgb(236, 182, 66);
+  --g2: rgb(82, 24, 154);
 }
 @keyframes background-pan {
   from {
