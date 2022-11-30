@@ -25,7 +25,7 @@ function App() {
   ];
 
   const handleOnClick = (index) => {
-    // count = count + 1;
+    count = count + 1;
     toggle = !toggle;
 
     anime({
