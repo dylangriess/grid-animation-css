@@ -31,7 +31,7 @@ function App() {
     anime({
       targets: ".tile",
       opacity: toggle ? 0 : 1,
-      // backgroundColor: colors[count % (colors.length -1)],
+      backgroundColor: colors[count % (colors.length - 1)],
       delay: anime.stagger(50, {
         grid: [columns, rows],
         from: index,
