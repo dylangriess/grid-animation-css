@@ -63,7 +63,7 @@ function App() {
   window.onresize = () => createGrid();
   return (
     <div className="App" id="tiles">
-      <div className="canvas bg-slate-500">
+      <div>
         <h1>Dylan Griess</h1>
       </div>
     </div>
